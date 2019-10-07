@@ -1,0 +1,49 @@
+<Project>
+  <!-- Set common properties regarding assembly information and nuget packages -->
+  
+  <PropertyGroup>
+    <Authors>Steven T. Cramer</Authors>
+    <Product>NftSideApp</Product>
+  </PropertyGroup>
+
+  <!-- Common compile parameters -->
+  <PropertyGroup>
+    <Nullable>disable</Nullable>
+    <LangVersion>preview</LangVersion>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <!-- We use full (Windows PDBs) until cross platform support for source link will get better -->
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <TestProjectTargetFramework>netstandard2.0</TestProjectTargetFramework>
+  </PropertyGroup>
+
+  <!--Versions of packages used across the solution-->
+  <PropertyGroup Label="Package Versions">
+    <MicrosoftAspNetCoreVersion>3.0.0</MicrosoftAspNetCoreVersion>
+    <MicrosoftAspNetCoreBlazorVersion>3.0.0-preview9.19465.2</MicrosoftAspNetCoreBlazorVersion>
+    <MicrosoftAspNetCoreBlazorBuildVersion>3.0.0-preview9.19465.2</MicrosoftAspNetCoreBlazorBuildVersion>
+    <MicrosoftAspNetCoreBlazorHttpClientVersion>3.0.0-preview9.19465.2</MicrosoftAspNetCoreBlazorHttpClientVersion>
+    <MicrosoftAspNetCoreBlazorServerVersion>3.0.0-preview9.19465.2</MicrosoftAspNetCoreBlazorServerVersion>
+    <MicrosoftAspNetCoreMvcNewtonsoftJsonVersion>$(MicrosoftAspNetCoreVersion)</MicrosoftAspNetCoreMvcNewtonsoftJsonVersion>
+    <MicrosoftAspNetCoreTestHostVersion>$(MicrosoftAspNetCoreVersion)</MicrosoftAspNetCoreTestHostVersion>
+    <MicrosoftCodeAnalysisFxCopAnalyzersVersion>2.9.6</MicrosoftCodeAnalysisFxCopAnalyzersVersion>
+
+    <BlazorStateVersion>1.1.5</BlazorStateVersion>
+    <BlazorExtensionsLoggingVersion>0.4.0</BlazorExtensionsLoggingVersion>
+    <FixieVersion>2.2.0</FixieVersion>
+    <FixieConsoleVersion>2.1.1</FixieConsoleVersion>
+    <FluentValidationVersion>8.4.0</FluentValidationVersion>
+    <MediatrExtensionsMicrosoftDependencyInjectionVersion>7.0.0</MediatrExtensionsMicrosoftDependencyInjectionVersion>
+    <MediatrVersion>7.0.0</MediatrVersion>
+    <MoqVersion>4.13.0</MoqVersion>
+    <ScrutorVersion>3.1.0</ScrutorVersion>
+    <SeleniumSupportVersion>3.141.0</SeleniumSupportVersion>
+    <SeleniumWebDriverVersion>3.141.0</SeleniumWebDriverVersion>
+    <ShouldlyVersion>3.0.2</ShouldlyVersion>
+    <NethereumVersion>3.3.0</NethereumVersion>
+  </PropertyGroup>
+</Project>
