@@ -1,9 +1,9 @@
 namespace NftSideapp.Api.Features.WebThree.Contracts.NftCreator.GetTokenNftType
 {
-  using NftSideapp.Api.Features.Base;
   using MediatR;
+  using NftSideApp.Api.Features.Base;
 
-public class GetTokenNftTypeSharedRequest : BaseRequest, IRequest<GetTokenNftTypeSharedResponse>
+  public class GetTokenNftTypeSharedRequest : BaseRequest, IRequest<GetTokenNftTypeSharedResponse>
   {
     public const string Route = "api/GetTokenNftType";
 

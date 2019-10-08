@@ -1,9 +1,9 @@
 namespace NftSideapp.Api.Features.WebThree.Contracts.Herc1155.ViewTokenData
 {
-    using System;
-    using NftSideapp.Api.Features.Base;
+  using System;
+  using NftSideApp.Api.Features.Base;
 
-    public class ViewTokenDataSharedResponse : BaseResponse
+  public class ViewTokenDataSharedResponse : BaseResponse
     {
         public ViewTokenDataSharedResponse() { }
         public ViewTokenDataSharedResponse(Guid aRequestId)

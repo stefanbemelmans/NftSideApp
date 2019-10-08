@@ -2,8 +2,7 @@
 {
   using Nethereum.Hex.HexTypes;
   using Nethereum.RPC.Eth.DTOs;
-  using NftSideapp.Api.Features.Base;
-  using System.Numerics;
+  using NftSideApp.Api.Features.Base;
 
   public class MintNftOfTypeSharedResponse : BaseResponse
   {

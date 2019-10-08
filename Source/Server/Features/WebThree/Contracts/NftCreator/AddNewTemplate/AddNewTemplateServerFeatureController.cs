@@ -3,7 +3,7 @@
   using System.Threading.Tasks;
   using NftSideApp.Server.Features.Base;
   using Microsoft.AspNetCore.Mvc;
-  using NftSideApp.Api.Features.WebThree.Contracts.NftCreator.AddNewTemplate;
+  using NftSideapp.Api.Features.WebThree.Contracts.NftCreator.AddNewTemplate;
 
   [Route(AddNewTemplateSharedRequest.Route)]
   public class AddNewTemplateServerFeaturesController : BaseController<AddNewTemplateSharedRequest, AddNewTemplateSharedResponse> 

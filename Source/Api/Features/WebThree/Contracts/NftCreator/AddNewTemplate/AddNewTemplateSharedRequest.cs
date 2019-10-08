@@ -1,8 +1,7 @@
 ﻿namespace NftSideapp.Api.Features.WebThree.Contracts.NftCreator.AddNewTemplate
 {
-  using NftSideapp.Api.Features.Base;
   using MediatR;
-  using NftSideapp.Api.Features.WebThree.Contracts.NftCreator.GetNftByType;
+  using NftSideApp.Api.Features.Base;
 
   public class AddNewTemplateSharedRequest : BaseRequest, IRequest<AddNewTemplateSharedResponse>
   {

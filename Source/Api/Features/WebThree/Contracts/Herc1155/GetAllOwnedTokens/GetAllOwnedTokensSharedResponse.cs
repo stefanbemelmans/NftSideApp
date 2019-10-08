@@ -2,7 +2,7 @@ namespace NftSideapp.Api.Features.WebThree.Contracts.Herc1155.GetAllOwnedTokens
 {
   using System;
   using System.Collections.Generic;
-  using NftSideapp.Api.Features.Base;
+  using NftSideApp.Api.Features.Base;
 
   public class GetAllOwnedTokensSharedResponse : BaseResponse
   {

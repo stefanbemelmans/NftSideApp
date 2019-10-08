@@ -1,8 +1,8 @@
 ﻿namespace NftSideApp.Server.Features.WebThree.Contracts.NftCreator.AddNewTemplate
 {
   using MediatR;
+  using NftSideapp.Api.Features.WebThree.Contracts.NftCreator.AddNewTemplate;
   using NftSideApp.Server.Services.WebThree.Contracts.NftCreator.AddNewTemplate;
-  using NftSideApp.Api.Features.WebThree.Contracts.NftCreator.AddNewTemplate;
   using System.Threading;
   using System.Threading.Tasks;
 

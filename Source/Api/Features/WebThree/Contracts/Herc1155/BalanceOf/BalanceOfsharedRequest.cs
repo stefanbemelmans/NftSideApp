@@ -1,9 +1,9 @@
 namespace NftSideapp.Api.Features.WebThree.Contracts.Herc1155.BalanceOf
 {
-    using NftSideapp.Api.Features.Base;
-    using MediatR;
+  using MediatR;
+  using NftSideApp.Api.Features.Base;
 
-    public class BalanceOfSharedRequest : BaseRequest, IRequest<BalanceOfSharedResponse>
+  public class BalanceOfSharedRequest : BaseRequest, IRequest<BalanceOfSharedResponse>
     {
         public const string Route = "api/balanceOf";
 

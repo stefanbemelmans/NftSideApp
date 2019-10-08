@@ -1,7 +1,7 @@
 ﻿namespace NftSideapp.Api.Features.WebThree.Contracts.NftCreator.MintNftOfType
 {
-  using NftSideapp.Api.Features.Base;
   using MediatR;
+  using NftSideApp.Api.Features.Base;
 
   public class MintNftOfTypeSharedRequest : BaseRequest, IRequest<MintNftOfTypeSharedResponse>
   {

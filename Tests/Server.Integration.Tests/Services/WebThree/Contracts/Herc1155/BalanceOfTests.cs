@@ -7,6 +7,7 @@ using NftSideApp.Server.Services.WebThree.Contracts.Herc1155.ContractInstance;
 using NftSideApp.Server.Services.WebThree.Instance;
 using NftSideApp.Server.Services.WebThree.Contracts.Herc1155.BalanceOf;
 using NftSideApp.Shared.Features.WebThree.Contracts.Herc1155.BalanceOf;
+using NftSideApp.Server.Integration.Tests.Infrastructure;
 
 namespace NftSideApp.Server.Integration.Tests.Services.WebThree.Contracts.Herc1155
 {

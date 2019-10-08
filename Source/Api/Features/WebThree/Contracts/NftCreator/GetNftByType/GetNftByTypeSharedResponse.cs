@@ -1,7 +1,7 @@
 namespace NftSideapp.Api.Features.WebThree.Contracts.NftCreator.GetNftByType
 {
   using System;
-  using NftSideapp.Api.Features.Base;
+  using NftSideApp.Api.Features.Base;
 
   public class GetNftByTypeSharedResponse : BaseResponse
   {

@@ -1,7 +1,7 @@
 ﻿namespace NftSideApp.Server.Features.WebThree.Contracts.Herc1155.BalanceOf
 {
   using MediatR;
-  using NftSideApp.Api.Features.WebThree.Contracts.Herc1155.BalanceOf;
+  using NftSideapp.Api.Features.WebThree.Contracts.Herc1155.BalanceOf;
   using NftSideApp.Server.Services.WebThree.Contracts.Herc1155.BalanceOf;
   using System.Threading;
   using System.Threading.Tasks;

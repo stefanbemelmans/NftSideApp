@@ -1,9 +1,9 @@
 namespace NftSideapp.Api.Features.WebThree.Contracts.Herc1155.ViewTokenData
 {
-  using NftSideapp.Api.Features.Base;
   using MediatR;
+  using NftSideApp.Api.Features.Base;
 
-public class ViewTokenDataSharedRequest : BaseRequest, IRequest<ViewTokenDataSharedResponse>
+  public class ViewTokenDataSharedRequest : BaseRequest, IRequest<ViewTokenDataSharedResponse>
   {
     public const string Route = "api/viewTokenData";
 

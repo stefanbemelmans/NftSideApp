@@ -1,10 +1,10 @@
 ﻿namespace NftSideapp.Api.Features.WebThree.Contracts.Herc1155.ViewTokenData
 {
-    using Nethereum.ABI.FunctionEncoding.Attributes;
-    using Nethereum.Contracts;
-    using NftSideapp.Api.Constants.AccountAddresses;
+  using Nethereum.ABI.FunctionEncoding.Attributes;
+  using Nethereum.Contracts;
+  using NftSideApp.Api.Constants.AccountAddresses;
 
-    [Function(name: "viewTokenData")] // This works
+  [Function(name: "viewTokenData")] // This works
     public class ViewTokenDataFunctionInput : FunctionMessage
     {
         public ViewTokenDataFunctionInput()

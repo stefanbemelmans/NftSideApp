@@ -1,9 +1,9 @@
 namespace NftSideapp.Api.Features.WebThree.Contracts.Herc1155
 {
-  using NftSideapp.Api.Features.Base;
   using MediatR;
+  using NftSideApp.Api.Features.Base;
 
-public class ViewMutableDataSharedRequest : BaseRequest, IRequest<ViewMutableDataSharedResponse>
+  public class ViewMutableDataSharedRequest : BaseRequest, IRequest<ViewMutableDataSharedResponse>
   {
     public const string Route = "api/viewMutableData";
 
