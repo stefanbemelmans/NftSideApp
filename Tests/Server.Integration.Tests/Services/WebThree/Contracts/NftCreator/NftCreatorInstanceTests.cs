@@ -2,13 +2,11 @@
 namespace NftSideApp.Server.Integration.Tests.Services.WebThree
 {
   using System;
-  using System.Threading.Tasks;
-  using MediatR;
   using Microsoft.Extensions.DependencyInjection;
   using Nethereum.Contracts;
+  using NftSideApp.Api.Constants.ContractConstants.NftCreator;
+  using NftSideApp.Server.Integration.Tests.Infrastructure;
   using NftSideApp.Server.Services.WebThree.Contracts.NftCreator.ContractInstance;
-  using NftSideApp.Server.Services.WebThree.Instance;
-  using NftSideApp.Shared.Constants.ContractConstants.NftCreator;
   using Shouldly;
   class NftCreatorInstanceTests
   {
@@ -29,7 +27,7 @@ namespace NftSideApp.Server.Integration.Tests.Services.WebThree
     {
       string address = NftCreatorInstance.Instance.Address;
 
-      address.ShouldBe(NftCreatorAddresses.NftCreatorRinkebyAddress);
+      address.ShouldBe(NftCreatorAddresses.NewNftCreatorRopstenAddress );
 
     }
 

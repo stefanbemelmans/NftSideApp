@@ -5,8 +5,8 @@
   using Shouldly;
   using MediatR;
   using System.Threading.Tasks;
-  using nt.Shared.Features.WebThree.Contracts.NftCreator.GetNftByType;
-  using nt.Shared.Features.WebThree;
+  using NftSideApp.Server.Integration.Tests.Infrastructure;
+  using NftSideapp.Api.Features.WebThree.Contracts.NftCreator.GetNftByType;
 
   class GetNftByTypeTests
   {
@@ -21,13 +21,13 @@
     // this test is not working either
     public async Task GetNftByType()
     {
-      var getNftTypeRequest = new GetNftByTypeSharedRequest() { GetNftType = 3 };
+      var getNftTypeRequest = new GetNftByTypeSharedRequest() {GetNftId = 3 };
 
       GetNftByTypeSharedResponse response = await Mediator.Send(getNftTypeRequest);
 
-        response.NftTypeData.Name.ShouldMatch("TesterTemplate_0");
-        response.NftTypeData.Symbol.ShouldMatch("TT0");
-        response.NftTypeData.MintLimit.ShouldBe(1000);
+        response.NftTypeDto.Name.ShouldMatch("TesterTemplate_0");
+        response.NftTypeDto.Symbol.ShouldMatch("TT0");
+        response.NftTypeDto.MintLimit.ShouldBe(1000);
     }
   }
 }

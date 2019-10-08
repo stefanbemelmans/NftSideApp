@@ -5,7 +5,8 @@
   using Shouldly;
   using MediatR;
   using System.Threading.Tasks;
-  using nt.Shared.Features.WebThree.Contracts.NftCreator.GetNftTypes;
+  using NftSideApp.Server.Integration.Tests.Infrastructure;
+  using NftSideapp.Api.Features.WebThree.Contracts.NftCreator.GetNftTypes;
 
   class GetNftTypesTests
   {

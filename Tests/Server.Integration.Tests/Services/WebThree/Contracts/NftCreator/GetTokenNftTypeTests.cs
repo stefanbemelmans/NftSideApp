@@ -6,7 +6,8 @@
   using Shouldly;
   using System.Threading.Tasks;
   using NftSideApp.Server.Services.WebThree.Contracts.NftCreator.Functions.GetTokenNftType;
-  using NftSideApp.Shared.Features.WebThree.Contracts.NftCreator.GetTokenNftType;
+  using NftSideApp.Server.Integration.Tests.Infrastructure;
+  using NftSideapp.Api.Features.WebThree.Contracts.NftCreator.GetTokenNftType;
 
   class GetTokenNftTypeTests
   {
@@ -28,7 +29,7 @@
       GetTokenNftTypeServiceResponse response = await Mediator.Send(getNftRequest);
 
       //Assert
-      response.TokensNftType.ShouldBe((uint)4);
+      response.NftId.ShouldBe((uint)4);
 
     }
     public async Task SharedShouldGetTokenNftType()
@@ -40,7 +41,7 @@
       GetTokenNftTypeSharedResponse response = await Mediator.Send(getNftSharedRequest);
 
       //Assert
-      response.NftType.ShouldBe((uint)4);
+      response.NftId.ShouldBe((uint)4);
 
     }
   }

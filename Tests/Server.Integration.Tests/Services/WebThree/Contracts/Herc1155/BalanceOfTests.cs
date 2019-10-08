@@ -1,17 +1,17 @@
-﻿using System;
-using MediatR;
-using Microsoft.Extensions.DependencyInjection;
-using Shouldly;
-using System.Threading.Tasks;
-using NftSideApp.Server.Services.WebThree.Contracts.Herc1155.ContractInstance;
-using NftSideApp.Server.Services.WebThree.Instance;
-using NftSideApp.Server.Services.WebThree.Contracts.Herc1155.BalanceOf;
-using NftSideApp.Shared.Features.WebThree.Contracts.Herc1155.BalanceOf;
-using NftSideApp.Server.Integration.Tests.Infrastructure;
-
-namespace NftSideApp.Server.Integration.Tests.Services.WebThree.Contracts.Herc1155
+﻿namespace NftSideApp.Server.Integration.Tests.Services.WebThree.Contracts.Herc1155
 {
-    class BalanceOfTests
+  using System;
+  using MediatR;
+  using Microsoft.Extensions.DependencyInjection;
+  using Shouldly;
+  using System.Threading.Tasks;
+  using NftSideApp.Server.Services.WebThree.Contracts.Herc1155.ContractInstance;
+  using NftSideApp.Server.Services.WebThree.Instance;
+  using NftSideApp.Server.Services.WebThree.Contracts.Herc1155.BalanceOf;
+  using NftSideApp.Server.Integration.Tests.Infrastructure;
+  using NftSideapp.Api.Features.WebThree.Contracts.Herc1155.BalanceOf;
+
+  class BalanceOfTests
     {
         public BalanceOfTests(TestFixture aTestFixture)
         {

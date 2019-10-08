@@ -1,17 +1,17 @@
 ﻿namespace nt.Server.Integration.Tests.Services.WebThree.Contracts.Herc1155
 {
-    using Shouldly;
-    using System;
-    using MediatR;
-    using Microsoft.Extensions.DependencyInjection;
-    using System.Threading.Tasks;
-    using nt.Server.Services.WebThree.Contracts.Herc1155.ContractInstance;
-    using nt.Server.Services.WebThree.Instance;
-    using nt.Server.Services.WebThree.Contracts.NftCreator.ContractInstance;
-    using nt.Shared.Features.WebThree.Contracts.Herc1155;
-    using nt.Shared.Features.WebThree.Contracts.Herc1155.ViewTokenData;
+  using Shouldly;
+  using System;
+  using MediatR;
+  using Microsoft.Extensions.DependencyInjection;
+  using System.Threading.Tasks;
+  using NftSideApp.Server.Integration.Tests.Infrastructure;
+  using NftSideApp.Server.Services.WebThree.Instance;
+  using NftSideApp.Server.Services.WebThree.Contracts.Herc1155.ContractInstance;
+  using NftSideApp.Server.Services.WebThree.Contracts.NftCreator.ContractInstance;
+  using NftSideapp.Api.Features.WebThree.Contracts.Herc1155.ViewTokenData;
 
-    class ViewTokenDataServerFeaturesTests
+  class ViewTokenDataServerFeaturesTests
     {
         public ViewTokenDataServerFeaturesTests(TestFixture aTestFixture)
         {
@@ -31,10 +31,10 @@
         public async Task ShouldGetTokenDataStringFromServerFeatures()
         { // 
           // Arrange
-            ViewTokenDataSharedRequest TokenDataRequest = new ViewTokenDataSharedRequest() { TokenIdToGet = 5 };
-          // Act
+            var TokenDataRequest = new ViewTokenDataSharedRequest() { TokenIdToGet = 5 };
+      // Act
 
-            var TokenDataResponse = await Mediator.Send(TokenDataRequest);
+      ViewTokenDataSharedResponse TokenDataResponse = await Mediator.Send(TokenDataRequest);
             TokenDataResponse.TokenDataString.ShouldBeOfType<string>();
         }
 

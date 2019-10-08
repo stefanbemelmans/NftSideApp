@@ -2,21 +2,16 @@
 {
   using System;
   using MediatR;
-  using AnySerializer;
   using Microsoft.Extensions.DependencyInjection;
   using Shouldly;
-  using NftSideApp.Server.Services.WebThree.Contracts.Herc1155.Functions;
   using System.Threading.Tasks;
-  using NftSideApp.Shared.Features.WebThree;
   using NftSideApp.Server.Services.WebThree.Contracts.Herc1155.ContractInstance;
   using NftSideApp.Server.Services.WebThree.Instance;
   using Nethereum.Contracts;
   using Nethereum.RPC.Eth.DTOs;
-  using NftSideApp.Server.Integration.Tests.Services.WebThree.Contracts.NftCreator;
   using NftSideApp.Server.Services.WebThree.Contracts.NftCreator.ContractInstance;
-  using System.Collections.Generic;
-  using System.Collections;
-  using NftSideApp.Shared.Constants.AccountAddresses;
+  using NftSideApp.Server.Integration.Tests.Infrastructure;
+  using NftSideApp.Api.Constants.AccountAddresses;
 
   class ViewTokenDataTestsForRealTests
   {

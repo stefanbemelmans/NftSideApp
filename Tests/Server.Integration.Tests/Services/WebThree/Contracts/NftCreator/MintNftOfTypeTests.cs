@@ -5,16 +5,12 @@
   using Microsoft.Extensions.DependencyInjection;
   using Shouldly;
   using System.Threading.Tasks;
-  using NftSideApp.Shared.Features.WebThree;
-  using NftSideApp.Server.Services.WebThree.Contracts.NftCreator.Functions.MintNftOfType;
-  using NftSideApp.Shared.Features.WebThree.Contracts.NftCreator.MintNftOfType;
   using Nethereum.Contracts;
-  using AnySerializer;
   using NftSideApp.Server.Services.WebThree.Contracts.NftCreator.ContractInstance;
   using NftSideApp.Server.Services.WebThree.Instance;
-  using NftSideApp.Shared.Constants.ContractConstants.NftCreator;
-  using NftSideApp.Server.Services.WebThree.Contracts.NftCreator.Functions.GetNftTypes;
-  using NftSideApp.Server.Services.WebThree.Contracts.Herc1155;
+  using NftSideApp.Server.Integration.Tests.Infrastructure;
+  using NftSideapp.Api.Features.WebThree.Contracts.NftCreator.MintNftOfType;
+  using NftSideApp.Api.Constants.ContractConstants.NftCreator;
 
   // Below is nftType 4 for deserialization
   class ImmutableData
@@ -59,12 +55,12 @@
 
       var aMintNftOfTypeFunctionMessage = new MintNftOfTypeFunctionInput
       {
-        Type = 4,
+        NftId = 4,
         MutableDataString = "The Third Minted NFT!Take 3",
         ImmutableDataString = "This Is MintingTest 3"
       };
 
-      Nethereum.Hex.HexTypes.HexBigInteger gasEstimate = await MintNftOfTypeFunctionHandler.EstimateGasAsync(NftCreatorAddresses.NftCreatorRinkebyAddress, aMintNftOfTypeFunctionMessage);
+      Nethereum.Hex.HexTypes.HexBigInteger gasEstimate = await MintNftOfTypeFunctionHandler.EstimateGasAsync(NftCreatorAddresses.NewNftCreatorRopstenAddress, aMintNftOfTypeFunctionMessage);
 
       aMintNftOfTypeFunctionMessage.Gas = gasEstimate.Value;
 

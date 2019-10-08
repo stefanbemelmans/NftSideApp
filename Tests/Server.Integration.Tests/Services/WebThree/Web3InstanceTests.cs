@@ -4,6 +4,7 @@ namespace NftSideApp.Server.Integration.Tests.Services.WebThree
   using System;
   using MediatR;
   using Microsoft.Extensions.DependencyInjection;
+  using NftSideApp.Server.Integration.Tests.Infrastructure;
   using NftSideApp.Server.Services.WebThree.Instance;
   using Shouldly;
 

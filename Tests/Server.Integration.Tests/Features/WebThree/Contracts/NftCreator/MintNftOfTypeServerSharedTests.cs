@@ -3,10 +3,11 @@
   using MediatR;
   using Microsoft.Extensions.DependencyInjection;
   using Nethereum.Contracts;
-  using nt.Server.Services.WebThree.Contracts.NftCreator.ContractInstance;
-  using nt.Server.Services.WebThree.Instance;
-  using nt.Shared.Constants.ContractConstants.NftCreator;
-  using nt.Shared.Features.WebThree.Contracts.NftCreator.MintNftOfType;
+  using NftSideapp.Api.Features.WebThree.Contracts.NftCreator.MintNftOfType;
+  using NftSideApp.Api.Constants.ContractConstants.NftCreator;
+  using NftSideApp.Server.Integration.Tests.Infrastructure;
+  using NftSideApp.Server.Services.WebThree.Contracts.NftCreator.ContractInstance;
+  using NftSideApp.Server.Services.WebThree.Instance;
   using Shouldly;
   using System;
   using System.Threading.Tasks;
@@ -37,16 +38,16 @@
 
       Function<MintNftOfTypeFunctionInput> aMintNftOfTypeFunction = NftCreator.Instance.GetFunction<MintNftOfTypeFunctionInput>();
 
-      Nethereum.Contracts.ContractHandlers.IContractTransactionHandler<MintNftOfTypeFunctionInput> MintNftOfTypeFunctionHandler = NethWeb3.Instance.Eth.GetContractTransactionHandler<MintNftOfTypeFunctionInput>();
+      Nethereum.Contracts.ContractHandlers.IContractTransactionHandler<MintNftOfTypeFunctionInput> mintNftOfTypeFunctionHandler = NethWeb3.Instance.Eth.GetContractTransactionHandler<MintNftOfTypeFunctionInput>();
 
       var aMintNftOfTypeFunctionMessage = new MintNftOfTypeFunctionInput
       {
-        Type = 4,
+        NftId = 4,
         MutableDataString = "The Third Minted NFT!Take 3",
         ImmutableDataString = "This Is MintingTest 3"
       };
 
-      Nethereum.Hex.HexTypes.HexBigInteger gasEstimate = await MintNftOfTypeFunctionHandler.EstimateGasAsync(NftCreatorAddresses.NftCreatorRinkebyAddress, aMintNftOfTypeFunctionMessage);
+      Nethereum.Hex.HexTypes.HexBigInteger gasEstimate = await mintNftOfTypeFunctionHandler.EstimateGasAsync(NftCreatorAddresses.NewNftCreatorRopstenAddress, aMintNftOfTypeFunctionMessage);
 
       aMintNftOfTypeFunctionMessage.Gas = gasEstimate.Value;
 

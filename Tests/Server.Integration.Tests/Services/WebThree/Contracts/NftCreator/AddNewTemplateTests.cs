@@ -5,14 +5,13 @@
   using Microsoft.Extensions.DependencyInjection;
   using Shouldly;
   using System.Threading.Tasks;
-  using NftSideApp.Shared.Features.WebThree;
-  using NftSideApp.Server.Services.WebThree.Contracts.NftCreator.AddNewTemplate;
-  using NftSideApp.Shared.Features.WebThree.Contracts.NftCreator.AddNewTemplate;
   using Nethereum.Contracts;
   using NftSideApp.Server.Services.WebThree.Contracts.NftCreator.ContractInstance;
   using NftSideApp.Server.Services.WebThree.Instance;
-  using NftSideApp.Shared.Constants.ContractConstants.NftCreator;
-  using NftSideApp.Server.Services.WebThree.Contracts.NftCreator.Functions.GetNftTypes;
+  using NftSideApp.Server.Integration.Tests.Infrastructure;
+  using NftSideapp.Api.Features.WebThree.Contracts.NftCreator.AddNewTemplate;
+  using NftSideApp.Server.Services.WebThree.Contracts.NftCreator.Functions.GetNftCount;
+  using NftSideApp.Api.Constants.ContractConstants.NftCreator;
 
   class AddNewTemplateTests
   {
@@ -35,9 +34,9 @@
 
       Nethereum.Contracts.ContractHandlers.IContractTransactionHandler<AddNewTemplateFunctionInput> addNewTemplateFunctionHandler = NethWeb3.Instance.Eth.GetContractTransactionHandler<AddNewTemplateFunctionInput>();
 
-      var getNftRequest = new GetNftTypesServiceRequest();
+      var getNftRequest = new GetNftCountServiceRequest();
 
-      GetNftTypesServiceResponse totalTypesBeforeTest = await Mediator.Send(getNftRequest);
+      GetNftCountServiceResponse totalTypesBeforeTest = await Mediator.Send(getNftRequest);
 
       var aAddNewTemplateFunctionMessage = new AddNewTemplateFunctionInput
       {
@@ -47,7 +46,7 @@
         NewTemplateMintLimit = 10
       };
 
-      Nethereum.Hex.HexTypes.HexBigInteger gasEstimate = await addNewTemplateFunctionHandler.EstimateGasAsync(NftCreatorAddresses.NftCreatorRinkebyAddress, aAddNewTemplateFunctionMessage);
+      Nethereum.Hex.HexTypes.HexBigInteger gasEstimate = await addNewTemplateFunctionHandler.EstimateGasAsync(NftCreatorAddresses.NewNftCreatorRopstenAddress, aAddNewTemplateFunctionMessage);
 
       aAddNewTemplateFunctionMessage.Gas = gasEstimate.Value;
 

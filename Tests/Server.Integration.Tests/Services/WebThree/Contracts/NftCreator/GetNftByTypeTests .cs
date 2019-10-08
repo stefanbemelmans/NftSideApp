@@ -6,7 +6,7 @@
   using Shouldly;
   using NftSideApp.Server.Services.WebThree.Contracts.NftCreator.Functions.GetNftByType;
   using System.Threading.Tasks;
-  using NftSideApp.Shared.Features.WebThree;
+  using NftSideApp.Server.Integration.Tests.Infrastructure;
 
   class GetNftByTypeTests
   {
@@ -28,8 +28,7 @@
       GetNftByTypeServiceResponse response = await Mediator.Send(getNftRequest);
 
       //Assert
-      response.NftTypeData.ShouldBeOfType<NftTemplate>();
-      response.NftTypeData.Name.ShouldBeOfType<string>();
+      response.Name.ShouldBeOfType<string>();
 
     }
   }

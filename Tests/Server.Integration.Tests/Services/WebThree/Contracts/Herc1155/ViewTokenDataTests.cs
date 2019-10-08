@@ -1,22 +1,18 @@
 ﻿namespace NftSideApp.Server.Integration.Tests.Services.WebThree.Contracts.Herc1155
 {
-    using System;
-    using MediatR;
-    using AnySerializer;
-    using Microsoft.Extensions.DependencyInjection;
-    using Shouldly;
-    using NftSideApp.Server.Services.WebThree.Contracts.Herc1155.Functions;
-    using System.Threading.Tasks;
-    using NftSideApp.Shared.Constants.AccountAddresses;
-    using NftSideApp.Shared.Features.WebThree.Contracts.Herc1155;
-    using NftSideApp.Server.Services.WebThree.Contracts.Herc1155.ContractInstance;
-    using NftSideApp.Server.Services.WebThree.Instance;
-    using Nethereum.Contracts;
-    using Nethereum.RPC.Eth.DTOs;
-    using NftSideApp.Server.Integration.Tests.Services.WebThree.Contracts.NftCreator;
-    using NftSideApp.Server.Services.WebThree.Contracts.NftCreator.ContractInstance;
+  using System;
+  using MediatR;
+  using Microsoft.Extensions.DependencyInjection;
+  using Shouldly;
+  using System.Threading.Tasks;
+  using NftSideApp.Server.Services.WebThree.Contracts.Herc1155.ContractInstance;
+  using NftSideApp.Server.Services.WebThree.Instance;
+  using Nethereum.Contracts;
+  using Nethereum.RPC.Eth.DTOs;
+  using NftSideApp.Server.Integration.Tests.Infrastructure;
+  using NftSideApp.Api.Constants.AccountAddresses;
 
-    class ViewTokenDataTests
+  class ViewTokenDataTests
     {
         public ViewTokenDataTests(TestFixture aTestFixture)
         {
@@ -80,47 +76,7 @@
             balance.ShouldNotBe(0);
         }
 
-        public async Task ShouldDeserializeToken3()
-        {
-            var request = new ViewTokenDataServiceRequest { ViewTokenId = 3 };
-
-            ViewTokenDataServiceResponse response = await Mediator.Send(request);
-            byte[] SerializedObject = Convert.FromBase64String(response.TokenDataString);
-
-            ImmutableData deSerObj = Serializer.Deserialize<ImmutableData>(SerializedObject, 0);
-
-            deSerObj.ShouldBeOfType<ImmutableData>();
-            deSerObj.Title.ShouldBe("The First Minted NFT!");
-
-        }
-        public async Task ShouldDeserializeToken3FromServerShared()
-        {
-            var request = new ViewTokenDataServiceRequest { ViewTokenId = 3 };
-
-            ViewTokenDataServiceResponse response = await Mediator.Send(request);
-            byte[] SerializedObject = Convert.FromBase64String(response.TokenDataString);
-
-            ImmutableData deSerObj = Serializer.Deserialize<ImmutableData>(SerializedObject, 0);
-
-            deSerObj.ShouldBeOfType<ImmutableData>();
-            deSerObj.Title.ShouldBe("The First Minted NFT!");
-
-        }
-
-        public async Task ShouldDeserializeToken4()
-        {
-            var request = new ViewTokenDataServiceRequest { ViewTokenId = 4 };
-
-            ViewTokenDataServiceResponse response = await Mediator.Send(request);
-
-            //byte[] SerializedObject = Convert.FromBase64String(response.TokenDataString);
-            //ImmutableData deSerObj = Serializer.Deserialize<ImmutableData>(SerializedObject, 0);
-            response.TokenDataString.ShouldBeOfType<string>();
-            response.TokenDataString.ShouldBe("This Is MintingTest 2");
-            //deSerObj.ShouldBeOfType<ImmutableData>();
-            //deSerObj.Title.ShouldBe("The First Minted NFT!");
-
-        }
+       
 
     }
 }

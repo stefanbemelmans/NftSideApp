@@ -7,11 +7,11 @@
   using System.Threading.Tasks;
   using NftSideApp.Server.Services.WebThree.Contracts.Herc1155.ContractInstance;
   using NftSideApp.Server.Services.WebThree.Contracts.Herc1155.GetAllOwnedTokens;
-  using NftSideApp.Server.Services.WebThree.Instance;
   using Nethereum.Contracts;
   using System.Collections.Generic;
-  using NftSideApp.Shared.Constants.AccountAddresses;
-  using NftSideApp.Shared.Features.WebThree.Contracts.Herc1155.GetAllOwnedTokens;
+  using NftSideApp.Api.Constants.AccountAddresses;
+  using NftSideApp.Server.Integration.Tests.Infrastructure;
+  using NftSideapp.Api.Features.WebThree.Contracts.Herc1155.GetAllOwnedTokens;
 
   class GetAllOwnedTokensTests
   {

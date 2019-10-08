@@ -5,6 +5,7 @@
   using System.Threading;
   using System.Threading.Tasks;
   using NftSideapp.Api.Features.WebThree.Contracts.NftCreator.GetNftByType;
+  using NftSideapp.Api.Features.WebThree;
 
   public class GetNftByTypeServerFeaturesHandler : IRequestHandler<GetNftByTypeSharedRequest, GetNftByTypeSharedResponse>
   {
