@@ -1,7 +1,7 @@
 ﻿namespace NftSideApp.Server.Features.WebThree.Contracts.NftCreator.MintNftOfType
 {
   using MediatR;
-  using NftSideApp.Api.Features.WebThree.Contracts.NftCreator.MintNftOfType;
+  using NftSideapp.Api.Features.WebThree.Contracts.NftCreator.MintNftOfType;
   using NftSideApp.Server.Services.WebThree.Contracts.NftCreator.Functions.MintNftOfType;
   using System.Threading;
   using System.Threading.Tasks;

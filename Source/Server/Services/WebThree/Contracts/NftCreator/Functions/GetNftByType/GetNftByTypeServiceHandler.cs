@@ -3,7 +3,6 @@
   using MediatR;
   using Nethereum.Contracts;
   using NftSideApp.Server.Services.WebThree.Contracts.NftCreator.ContractInstance;
-  using NftSideApp.Api.Features.WebThree;
   using System.Threading;
   using System.Threading.Tasks;
 

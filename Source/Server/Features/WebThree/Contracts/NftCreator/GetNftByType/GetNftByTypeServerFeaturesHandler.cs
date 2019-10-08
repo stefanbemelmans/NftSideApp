@@ -1,11 +1,10 @@
 ﻿namespace NftSideApp.Server.Features.WebThree.Contracts.NftCreator.GetNftByType
 {
   using MediatR;
-  using NftSideApp.Api.Features.WebThree.Contracts.NftCreator.GetNftByType;
   using NftSideApp.Server.Services.WebThree.Contracts.NftCreator.Functions.GetNftByType;
   using System.Threading;
   using System.Threading.Tasks;
-  using NftSideApp.Api.Features.WebThree;
+  using NftSideapp.Api.Features.WebThree.Contracts.NftCreator.GetNftByType;
 
   public class GetNftByTypeServerFeaturesHandler : IRequestHandler<GetNftByTypeSharedRequest, GetNftByTypeSharedResponse>
   {

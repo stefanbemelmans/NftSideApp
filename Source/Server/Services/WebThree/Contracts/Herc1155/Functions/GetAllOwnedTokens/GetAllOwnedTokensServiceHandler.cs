@@ -7,7 +7,7 @@
   using MediatR;
   using NftSideApp.Api.Constants.AccountAddresses;
   using System.Collections.Generic;
-  using NftSideApp.Api.Features.WebThree.Contracts.Herc1155.GetAllOwnedTokens;
+  using NftSideapp.Api.Features.WebThree.Contracts.Herc1155.GetAllOwnedTokens;
 
   public class GetAllOwnedTokensServerServiceHandler : IRequestHandler<GetAllOwnedTokensServiceRequest, GetAllOwnedTokensServiceResponse>
   {

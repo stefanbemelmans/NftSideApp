@@ -1,7 +1,5 @@
 ﻿namespace NftSideApp.Server.Services.WebThree.Contracts.NftCreator.Functions.GetNftByType
 {
-  using NftSideApp.Api.Features.Base;
-  using NftSideApp.Api.Features.WebThree;
 
   using Nethereum.ABI.FunctionEncoding.Attributes;
 

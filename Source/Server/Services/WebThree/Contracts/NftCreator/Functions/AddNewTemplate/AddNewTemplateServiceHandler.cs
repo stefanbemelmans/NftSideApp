@@ -7,7 +7,7 @@
   using NftSideApp.Server.Services.WebThree.Instance;
   using MediatR;
   using NftSideApp.Api.Constants.ContractConstants.NftCreator;
-  using NftSideApp.Api.Features.WebThree.Contracts.NftCreator.AddNewTemplate;
+  using NftSideapp.Api.Features.WebThree.Contracts.NftCreator.AddNewTemplate;
 
   public class AddNewTemplateServerServiceHandler : IRequestHandler<AddNewTemplateServiceRequest, AddNewTemplateServiceResponse>
   {

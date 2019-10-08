@@ -4,7 +4,7 @@
   using System.Threading.Tasks;
   using MediatR;
   using NftSideApp.Server.Services.WebThree.Contracts.NftCreator.Functions.GetNftCount;
-  using NftSideApp.Api.Features.WebThree.Contracts.NftCreator.GetNftCount;
+  using NftSideapp.Api.Features.WebThree.Contracts.NftCreator.GetNftCount;
 
   public class GetNftCountHandler : IRequestHandler<GetNftCountSharedRequest, GetNftCountSharedResponse>
   {

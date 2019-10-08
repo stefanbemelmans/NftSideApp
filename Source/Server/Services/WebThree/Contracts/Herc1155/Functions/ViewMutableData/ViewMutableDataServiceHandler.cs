@@ -4,7 +4,6 @@
   using System.Threading;
   using Nethereum.Contracts;
   using NftSideApp.Server.Services.WebThree.Contracts.Herc1155.ContractInstance;
-  using NftSideApp.Api.Features.WebThree.Contracts.Herc1155;
   using MediatR;
 
   public class ViewMutableDataServerServiceHandler : IRequestHandler<ViewMutableDataServiceRequest, ViewMutableDataServiceResponse>

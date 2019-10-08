@@ -1,13 +1,12 @@
 ﻿namespace NftSideApp.Server.Features.WebThree.Contracts.Herc1155.ViewTokenData
 {
-    using System.Threading;
-    using System.Threading.Tasks;
-    using MediatR;
-    using NftSideApp.Server.Services.WebThree.Contracts.Herc1155.Functions;
-    using NftSideApp.Api.Features.WebThree.Contracts.Herc1155;
-    using NftSideApp.Api.Features.WebThree.Contracts.Herc1155.ViewTokenData;
+  using System.Threading;
+  using System.Threading.Tasks;
+  using MediatR;
+  using NftSideApp.Server.Services.WebThree.Contracts.Herc1155.Functions;
+  using NftSideapp.Api.Features.WebThree.Contracts.Herc1155.ViewTokenData;
 
-    public class ViewTokenDataServerFeaturesHandler : IRequestHandler<ViewTokenDataSharedRequest, ViewTokenDataSharedResponse>
+  public class ViewTokenDataServerFeaturesHandler : IRequestHandler<ViewTokenDataSharedRequest, ViewTokenDataSharedResponse>
     {
         IMediator Mediator { get; set; }
 

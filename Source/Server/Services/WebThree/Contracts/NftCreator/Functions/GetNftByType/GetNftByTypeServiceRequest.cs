@@ -2,7 +2,6 @@
 {
   using MediatR;
   using Nethereum.ABI.FunctionEncoding.Attributes;
-  using NftSideApp.Api.Features.WebThree.Contracts.NftCreator.GetNftByType;
   [Function(name: "NFTTemplates")]
   public class GetNftByTypeServiceRequest : IRequest<GetNftByTypeServiceResponse>
   {

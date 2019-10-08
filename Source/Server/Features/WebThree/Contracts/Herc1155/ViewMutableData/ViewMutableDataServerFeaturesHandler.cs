@@ -4,7 +4,8 @@
   using System.Threading.Tasks;
   using MediatR;
   using NftSideApp.Server.Services.WebThree.Contracts.Herc1155;
-  using NftSideApp.Api.Features.WebThree.Contracts.Herc1155;
+  using NftSideapp.Api.Features.WebThree.Contracts.Herc1155;
+
   public class ViewMutableDataServerFeaturesHandler : IRequestHandler<ViewMutableDataSharedRequest, ViewMutableDataSharedResponse>
   {
     IMediator Mediator { get; set; }

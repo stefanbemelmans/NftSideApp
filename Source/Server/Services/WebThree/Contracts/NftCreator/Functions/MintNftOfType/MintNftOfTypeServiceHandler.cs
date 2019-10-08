@@ -7,10 +7,9 @@
   using NftSideApp.Server.Services.WebThree.Contracts.NftCreator.ContractInstance;
   using NftSideApp.Server.Services.WebThree.Instance;
   using NftSideApp.Api.Constants.ContractConstants.NftCreator;
-  using NftSideApp.Api.Features.WebThree.Contracts.NftCreator.MintNftOfType;
-  using System.Numerics;
   using System.Threading;
   using System.Threading.Tasks;
+  using NftSideapp.Api.Features.WebThree.Contracts.NftCreator.MintNftOfType;
 
   public class MintNftOfTypeServerServiceHandler : IRequestHandler<MintNftOfTypeServiceRequest, MintNftOfTypeServiceResponse>
   {
@@ -34,7 +33,7 @@
       {
         NftId = aMintNftOfTypeServiceRequest.MintNftId,
         ImmutableDataString = aMintNftOfTypeServiceRequest.ImmutableDataString,
-        MutableDataString = aMintNftOfTypeServiceRequest.MutableDataString == null ? "" : aMintNftOfTypeServiceRequest.MutableDataString
+        MutableDataString = aMintNftOfTypeServiceRequest.MutableDataString ?? ""
       };
 
       Nethereum.Hex.HexTypes.HexBigInteger gasEstimate = await mintingHandler.EstimateGasAsync(NftCreatorAddresses.NewNftCreatorRopstenAddress, aMintNftOfTypeFunctionMessage);

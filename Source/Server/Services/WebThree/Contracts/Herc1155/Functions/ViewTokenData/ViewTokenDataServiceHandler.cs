@@ -1,16 +1,13 @@
 ﻿namespace NftSideApp.Server.Services.WebThree.Contracts.Herc1155.Functions
 {
-    using System.Threading.Tasks;
-    using System.Threading;
-    using Nethereum.Contracts;
-    using NftSideApp.Server.Services.WebThree.Contracts.Herc1155.ContractInstance;
-    using NftSideApp.Api.Features.WebThree.Contracts.Herc1155;
-    using AnySerializer;
-    using MediatR;
-    using NftSideApp.Api.Constants.AccountAddresses;
-    using System;
+  using System.Threading.Tasks;
+  using System.Threading;
+  using Nethereum.Contracts;
+  using NftSideApp.Server.Services.WebThree.Contracts.Herc1155.ContractInstance;
+  using MediatR;
+  using NftSideApp.Api.Constants.AccountAddresses;
 
-    public class ViewTokenDataServerServiceHandler : IRequestHandler<ViewTokenDataServiceRequest, ViewTokenDataServiceResponse>
+  public class ViewTokenDataServerServiceHandler : IRequestHandler<ViewTokenDataServiceRequest, ViewTokenDataServiceResponse>
     {
         Herc1155Instance Herc1155 { get; set; }
 

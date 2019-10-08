@@ -1,7 +1,7 @@
 ﻿namespace NftSideApp.Server.Features.WebThree.Contracts.NftCreator.GetTokenNftType
 {
   using MediatR;
-  using NftSideApp.Api.Features.WebThree.Contracts.NftCreator.GetTokenNftType;
+  using NftSideapp.Api.Features.WebThree.Contracts.NftCreator.GetTokenNftType;
   using NftSideApp.Server.Services.WebThree.Contracts.NftCreator.Functions.GetTokenNftType;
   using System.Threading;
   using System.Threading.Tasks;
