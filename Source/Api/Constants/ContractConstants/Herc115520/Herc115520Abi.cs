@@ -3,7 +3,8 @@ namespace NftSideApp.Api.Constants.ContractConstants.Herc1155
 {
   public class Herc115520ContractAbi
   {
-    public static string Abi = @"[
+    public static string Abi = 
+    @"[
     {
       ""constant"": true,
       ""inputs"": [
@@ -1354,12 +1355,9 @@ namespace NftSideApp.Api.Constants.ContractConstants.Herc1155
       ""stateMutability"": ""view"",
       ""type"": ""function""
     }
-  ]"";
-  };
-};
-]";
+  ]";
   }
 }
-
+ 
 
 

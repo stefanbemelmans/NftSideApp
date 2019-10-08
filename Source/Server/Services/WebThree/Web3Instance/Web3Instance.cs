@@ -9,7 +9,8 @@
   {
     public NethWeb3()
     {
-      Instance = new Web3(testAccount.TesterAcct, Web3Endpoints.RopstenEndpoint);
+      //Instance = new Web3(testAccount.TesterAcct, Web3Endpoints.RopstenEndpoint);
+      Instance = new Web3(testAccount.TesterAcct, Web3Endpoints.MainNetEndpoint);
     }
 
     public Web3 Instance { get; set; }
